@@ -11,3 +11,8 @@ buying_template = "You just bought {} {}."
 print(buying_template.format(3, "fidget cubes"))
 
 print("Hello" in "Hello, World")
+
+print("Person is present in Quote:", quote.count("person"), "times.")
+print(
+    "Person is present in Quote at", quote.find("person"), "index."
+)  # -1 if not found.
