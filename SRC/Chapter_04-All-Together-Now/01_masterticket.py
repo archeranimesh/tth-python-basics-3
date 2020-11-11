@@ -1,5 +1,14 @@
 TICKET_PRICE = 10
+SERVICE_CHARGE = 2
 tickets_remaining = 100
+
+
+def calculate_price(num_tickets):
+    """
+    It takes number of tickets and returns num_tickets * TICKET_PRICE
+    """
+    return (num_tickets * TICKET_PRICE) + SERVICE_CHARGE
+
 
 # Run this code continuously.
 while tickets_remaining:
@@ -21,7 +30,7 @@ while tickets_remaining:
         print("We ran into an issue, {}. please try again.".format(ex))
     else:
         # Calculate the price (no of ticktes multiplied by the price) and assign it to a variable.
-        amount_due = num_tickets * TICKET_PRICE
+        amount_due = calculate_price(num_tickets)
         # O/P the price to the screen.
         print("The total due is ${}".format(amount_due))
         # Prompt the user if they want to proceed. Y/N
